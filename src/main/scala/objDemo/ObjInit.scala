@@ -6,4 +6,8 @@ package objDemo
  */
 object ObjInit {
   val c1=new C1
+
+  def show():Unit={
+    println("show")
+  }
 }
