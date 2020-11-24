@@ -1,12 +1,9 @@
+
 import java.util
 
 import com.example.tutorial.AddressBookProtos
-import com.google.protobuf.{ByteString, Timestamp}
-import gdt.warehouse.DwTableRecordProtos
-import gdt.warehouse.worker.process.dmp_rta_service.DMPRTAAudienceInfoProtos
+import com.google.protobuf.Timestamp
 import org.junit.Test
-
-import scala.collection.mutable
 
 /**
  * @author dominiczhu
@@ -20,22 +17,22 @@ import scala.collection.mutable
  */
 class PBDemo {
 
-    @Test
-    def constructMessage():Unit={
-      val personBuilder=AddressBookProtos.Person.newBuilder()
-      personBuilder.setName("name1")
-      personBuilder.setId(1)
-      personBuilder.setLastUpdated(Timestamp.newBuilder().setSeconds(123).build())
+  @Test
+  def constructMessage(): Unit = {
+    val personBuilder = AddressBookProtos.Person.newBuilder()
+    personBuilder.setName("name1")
+    personBuilder.setId(1)
+    personBuilder.setLastUpdated(Timestamp.newBuilder().setSeconds(123).build())
 
 
-      val addressBookBuilder=AddressBookProtos.AddressBook.newBuilder()
-      val persons=new util.ArrayList[AddressBookProtos.Person]()
-      persons.add(personBuilder.build())
-      personBuilder.setName("name2")
-      personBuilder.setId(2)
-      persons.add(personBuilder.build())
+    val addressBookBuilder = AddressBookProtos.AddressBook.newBuilder()
+    val persons = new util.ArrayList[AddressBookProtos.Person]()
+    persons.add(personBuilder.build())
+    personBuilder.setName("name2")
+    personBuilder.setId(2)
+    persons.add(personBuilder.build())
 
-      addressBookBuilder.addAllPeople(persons)
-      println(addressBookBuilder.build())
-    }
+    addressBookBuilder.addAllPeople(persons)
+    println(addressBookBuilder.build())
+  }
 }
