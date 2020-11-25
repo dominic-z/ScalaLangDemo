@@ -33,6 +33,6 @@ class PBDemo {
     persons.add(personBuilder.build())
 
     addressBookBuilder.addAllPeople(persons)
-    println(addressBookBuilder.build())
+    println(addressBookBuilder.build().toByteArray)
   }
 }

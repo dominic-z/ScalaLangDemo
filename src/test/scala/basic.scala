@@ -1,3 +1,4 @@
+import org.apache.commons.lang.StringUtils
 import org.junit.Test
 
 /**
@@ -33,5 +34,10 @@ class basic {
     println(title)
 
   }
-
+  @Test
+  def testError1():Unit={
+    val s=","
+//    测试空行错误，这个报错信息和2.11有差别
+    println(StringUtils.split(s,",").head)
+  }
 }
