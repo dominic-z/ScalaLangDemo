@@ -13,4 +13,11 @@ class OptionDemo {
 
     println(op.get)
   }
+
+  @Test
+  def testNone():Unit={
+    val op:Option[String]=None
+
+    println(op.get)
+  }
 }
