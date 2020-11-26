@@ -19,4 +19,16 @@ class Mutable {
     val s=Set(Case("a",2))
     println(s)
   }
+
+  @Test
+  def testTupleSet():Unit={
+    val s=Set(("a","b"),("c","d"),("c","d"))
+    println(s)
+  }
+
+  @Test
+  def testArrayDistinct():Unit={
+    val s=Array(("a","b"),("c","d"),("c","d"))
+    println(s.distinct.toSeq)
+  }
 }
