@@ -31,4 +31,11 @@ class Mutable {
     val s=Array(("a","b"),("c","d"),("c","d"))
     println(s.distinct.toSeq)
   }
+
+  @Test
+  def sortArray():Unit={
+    val s=Array("aa/20201130/202011300100","aa/20201130/202011300130","aa/20201130/202011300000")
+    println(s.sorted.toSeq.reverse)
+
+  }
 }
