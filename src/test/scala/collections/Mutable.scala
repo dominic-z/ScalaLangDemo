@@ -38,4 +38,11 @@ class Mutable {
     println(s.sorted.toSeq.reverse)
 
   }
+
+  @Test
+  def intersect():Unit={
+    val arr1="aaabc".toArray
+    val arr2="aac".toArray
+    println(arr1.intersect(arr2).toSeq)
+  }
 }
