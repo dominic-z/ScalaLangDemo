@@ -14,6 +14,10 @@
         <module>JacksonDemo</module>
     </modules>
     <properties>
+        <scala.maven.plugin.version>4.4.0</scala.maven.plugin.version>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+        <maven.shade.plugin.version>3.2.2</maven.shade.plugin.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -29,7 +33,7 @@
         </dependency>
 
         <dependency>
-<!--            在新版的scala-maven-plugin里，好像需要把scala-lang的依赖添加进去，否则maven编译的时候会报缺包-->
+            <!--            在新版的scala-maven-plugin里，好像需要把scala-lang的依赖添加进去，否则maven编译的时候会报缺包-->
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
@@ -47,7 +51,7 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.4.0</version>
+                <version>${scala.maven.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>scala-compile-first</id>
@@ -74,7 +78,7 @@
                 <configuration>
                     <scalaVersion>${scala.version}</scalaVersion>
                     <recompileMode>incremental</recompileMode>
-<!--                    <useZincServer>true</useZincServer>-->
+                    <!--                    <useZincServer>true</useZincServer>-->
                     <args>
                         <arg>-unchecked</arg>
                         <arg>-deprecation</arg>
@@ -91,7 +95,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -103,7 +107,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>${maven.shade.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>uber-jar</id>
