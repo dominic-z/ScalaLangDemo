@@ -9,9 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>LombokDemo</module>
-        <module>ProtocolBufferDemo</module>
-        <module>JacksonDemo</module>
+        <module>lombok-demo</module>
+        <module>protocol-buffer-demo</module>
+        <module>jackson-demo</module>
+        <module>fastjson-demo</module>
     </modules>
     <properties>
         <scala.maven.plugin.version>4.4.0</scala.maven.plugin.version>
