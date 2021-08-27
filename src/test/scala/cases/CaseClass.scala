@@ -31,4 +31,14 @@ class CaseClass {
     println(stu1.name eq copyStu1.name)
   }
 
+  @Test
+  def caseObj():Unit={
+    println(Habit.objFunc())
+  }
+
+  @Test
+  def overwriteApply():Unit={
+    println(Habit("p"))
+  }
+
 }
